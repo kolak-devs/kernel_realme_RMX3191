@@ -11,7 +11,6 @@
 #include <linux/err.h>
 #include <linux/string.h>
 #include <linux/sysfs.h>
-<<<<<<< HEAD
 #ifdef CONFIG_OPLUS_KEVENT_UPLOAD
 #include <linux/version.h>
 #if (LINUX_VERSION_CODE >= KERNEL_VERSION(5, 4, 0))
@@ -20,8 +19,6 @@
 #include <linux/oplus_kevent.h>
 #endif
 #endif
-=======
->>>>>>> 654f3abce742 (treewide: Drop Oplus security changes)
 #include <soc/oplus/system/kernel_fb.h>
 #include <linux/delay.h>
 #include <linux/mutex.h>
@@ -63,15 +60,12 @@ static char *const _tag[FB_MAX_TYPE + 1] = {
 	"fb_boot",
 };
 
-<<<<<<< HEAD
 #ifdef CONFIG_OPLUS_KEVENT_UPLOAD
 #if (LINUX_VERSION_CODE >= KERNEL_VERSION(5, 4, 0)) && !IS_ENABLED(CONFIG_OPLUS_KERNEL_SECURE_GUARD)
 int kevent_send_to_user(struct kernel_packet_info *userinfo) {return 0;}
 #endif
 #endif
 
-=======
->>>>>>> 654f3abce742 (treewide: Drop Oplus security changes)
 static struct packet * package_alloc(
 	fb_tag tag_id, const char *event_id, unsigned char *payload)
 {
